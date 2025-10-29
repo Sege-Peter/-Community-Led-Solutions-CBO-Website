@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Community-Led Solutions CBO</title>
+  <meta name="description" content="Learn more about Community-Led Solutions CBO (CLS CBO), a registered community-based organization in Kisumu County, Kenya. Discover our vision, mission, philosophy, values, leadership, and community-driven approaches.">
+  <meta name="keywords" content="Community Led Solutions CBO, CLS CBO Kisumu, about CLS, Kenya NGOs, governance advocacy, child protection, climate change Kisumu, health programs, social accountability">
+  <meta name="author" content="Community-Led Solutions CBO | Website by Skope Designs">
+  <link rel="canonical" href="https://www.clscbo.org/about.html">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Animate.css for effects -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+  <!-- Font Awesome for socials -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* Custom CSS for enhanced styling */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1.5s cubic-bezier(0.4,0,0.2,1);
+      min-height: 70vh;
+      position: relative;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(30,64,175,0.85) 0%, rgba(251,146,60,0.85) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Floating animation for elements */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    /* Custom button styles */
+    .btn-primary {
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px 0 rgba(249, 115, 22, 0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px 0 rgba(249, 115, 22, 0.4);
+    }
+    
+    /* Card hover effects */
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+    
+    /* Value icons animation */
+    @keyframes pulse-glow {
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+    
+    .value-icon {
+      animation: pulse-glow 2s infinite;
+      border-radius: 50%;
+      padding: 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(34, 197, 94, 0.1);
+    }
+    
+    /* Section dividers */
+    .section-divider {
+      height: 4px;
+      width: 80px;
+      background: linear-gradient(90deg, #1e40af 0%, #f97316 100%);
+      margin: 20px auto;
+      border-radius: 2px;
+    }
+    
+    /* Partner logo animation */
+    .partner-logo {
+      transition: all 0.3s ease;
+      filter: grayscale(100%);
+      opacity: 0.7;
+    }
+    
+    .partner-logo:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    
+    /* Mobile menu animation */
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .mobile-menu {
+      animation: slideDown 0.5s ease forwards;
+    }
+    
+    /* Text highlight animation */
+    .highlight-text {
+      background: linear-gradient(120deg, #fef3c7 0%, #fef3c7 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 0.3em;
+      background-position: 0 88%;
+      transition: background-size 0.25s ease-in;
+    }
+    
+    .highlight-text:hover {
+      background-size: 100% 88%;
+    }
+    
+    /* Scroll progress indicator */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: linear-gradient(90deg, #1e40af 0%, #f97316 100%);
+      z-index: 1000;
+      transition: width 0.3s ease;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 50vh;
+      }
+      
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .partner-slide {
+        animation: partnerScroll 15s linear infinite;
+      }
+      
+      @keyframes partnerScroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #1e40af 0%, #f97316 100%);
+      border-radius: 10px;
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress"></div>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div class="bg-white p-1 rounded-lg transform group-hover:scale-110 transition duration-300">
+          <img src="images/cls-logo.jpeg" alt="CLS Logo" class="h-10 w-10 rounded-md">
+        </div>
+        <span class="font-bold text-lg md:text-xl">COMMUNITY LED SOLUTIONS CBO</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="relative py-2 group">
+          <span class="group-hover:text-orange-400 transition-colors duration-300">Home</span>
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="about.html" class="relative py-2 group">
+          <span class="text-orange-400 font-semibold">About</span>
+          <span class="absolute bottom-0 left-0 w-full h-0.5 bg-orange-400"></span>
+        </a>
+        <a href="programs.html" class="relative py-2 group">
+          <span class="group-hover:text-orange-400 transition-colors duration-300">Programs</span>
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="resources.html" class="relative py-2 group">
+          <span class="group-hover:text-orange-400 transition-colors duration-300">Resources</span>
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="blog.html" class="relative py-2 group">
+          <span class="group-hover:text-orange-400 transition-colors duration-300">Blog</span>
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="contact.html" class="relative py-2 group">
+          <span class="group-hover:text-orange-400 transition-colors duration-300">Contact</span>
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="donate.html" class="bg-orange-500 px-4 py-2 rounded-md hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-md">Donate</a>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button id="hamburger" class="md:hidden focus:outline-none transition transform hover:scale-110" type="button" title="Menu">
+        <i data-feather="menu" class="h-7 w-7"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden flex-col bg-blue-800 md:hidden px-4 pb-4 space-y-2 mobile-menu">
+      <a href="index.html" class="block py-3 border-b border-blue-700 hover:text-orange-400 transition-colors duration-300">Home</a>
+      <a href="about.html" class="block py-3 border-b border-blue-700 text-orange-400 font-semibold">About</a>
+      <a href="programs.html" class="block py-3 border-b border-blue-700 hover:text-orange-400 transition-colors duration-300">Programs</a>
+      <a href="resources.html" class="block py-3 border-b border-blue-700 hover:text-orange-400 transition-colors duration-300">Resources</a>
+      <a href="blog.html" class="block py-3 border-b border-blue-700 hover:text-orange-400 transition-colors duration-300">Blog</a>
+      <a href="contact.html" class="block py-3 border-b border-blue-700 hover:text-orange-400 transition-colors duration-300">Contact</a>
+      <a href="donate.html" class="block py-3 bg-orange-500 rounded-md text-center hover:bg-orange-600 transition-colors duration-300 mt-2 font-semibold">Donate</a>
+    </div>
+  </header>
+
+  <!-- Hero Section with Animated Slides -->
+  <section id="hero" class="hero flex items-center justify-center relative mb-10 rounded-b-3xl shadow-2xl overflow-hidden">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-center px-6 py-16 md:py-24 w-full">
+      <div class="floating mb-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-lg animate__animated animate__fadeInDown">
+          About Community-Led Solutions CBO
+        </h1>
+      </div>
+      <p class="text-xl md:text-2xl text-orange-200 font-medium mb-8 animate__animated animate__fadeInUp animate__delay-1s">
+        Empowering communities in Kisumu & Western Kenya for sustainable change.
+      </p>
+      <a href="#about" class="btn-primary inline-block text-white font-bold py-3 px-8 rounded-full animate__animated animate__fadeInUp animate__delay-2s">
+        Learn More <i class="fas fa-arrow-down ml-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Background -->
+      <div class="mb-16 animate__animated animate__fadeInUp">
+        <h2 class="text-4xl font-bold text-blue-900 mb-6 text-center">Our Background</h2>
+        <div class="section-divider"></div>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6 text-justify">
+          <span class="highlight-text">Community-Led Solutions Community Based Organization (CLS CBO)</span> is a registered CBO under the Ministry of Labour and Social Protection, Kisumu East Office. 
+          Formed and registered in 2020, our office is located in West Kajulu West Location, along Obwolo–Osiepe Road, opposite Menonnite Church.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed text-justify">
+          CLS CBO works with local communities in Kisumu County and Western Kenya to create sustainable solutions addressing 
+          <span class="font-semibold text-blue-700">health, governance, climate change, and child protection.</span>
+        </p>
+      </div>
+
+      <!-- Philosophy -->
+      <div class="mb-16 animate__animated animate__fadeInUp">
+        <h2 class="text-3xl font-bold text-blue-900 mb-6 text-center">Our Philosophy</h2>
+        <div class="section-divider"></div>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6 text-justify">
+          CLS is guided by the doctrine of <em class="text-orange-600 font-semibold">"Nothing for us without us"</em>, ensuring authentic community involvement in development. 
+          We believe communities hold unique knowledge, resources, and social capital essential for sustainable solutions. 
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed text-justify">
+          Our role is to inspire collective action, preserve community pride, and foster ownership of development processes. This approach 
+          acts as a catalyst for building resilient and empowered communities.
+        </p>
+      </div>
+
+      <!-- Vision, Mission, Core Values -->
+      <div class="grid md:grid-cols-3 gap-10 animate__animated animate__fadeInUp">
+        <!-- Vision -->
+        <div class="card-hover bg-white rounded-2xl p-8 text-center relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-orange-500"></div>
+          <div class="value-icon mx-auto mb-4">
+            <i class="fas fa-eye text-green-600 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-blue-900">Our Vision</h3>
+          <p class="text-gray-700 leading-relaxed">Resilient, resourceful, and sustainable communities.</p>
+        </div>
+        
+        <!-- Mission -->
+        <div class="card-hover bg-white rounded-2xl p-8 text-center relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-green-500"></div>
+          <div class="value-icon mx-auto mb-4">
+            <i class="fas fa-bullseye text-orange-500 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-blue-900">Our Mission</h3>
+          <p class="text-gray-700 leading-relaxed">
+            To inspire and facilitate communities to create sustainable solutions in governance, health, climate change & disasters, and child protection.
+          </p>
+        </div>
+        
+        <!-- Core Values -->
+        <div class="card-hover bg-white rounded-2xl p-8 text-center relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-blue-600"></div>
+          <div class="value-icon mx-auto mb-4">
+            <i class="fas fa-heart text-red-500 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-blue-900">Our Core Values</h3>
+          <ul class="text-gray-700 space-y-3 text-left">
+            <li class="flex items-center animate__animated animate__fadeInRight animate__delay-1s">
+              <span class="bg-green-100 text-green-800 rounded-full p-2 mr-3">🌍</span>
+              <span>Sustainability</span>
+            </li>
+            <li class="flex items-center animate__animated animate__fadeInRight animate__delay-2s">
+              <span class="bg-blue-100 text-blue-800 rounded-full p-2 mr-3">🤝</span>
+              <span>Integrity</span>
+            </li>
+            <li class="flex items-center animate__animated animate__fadeInRight animate__delay-3s">
+              <span class="bg-purple-100 text-purple-800 rounded-full p-2 mr-3">👥</span>
+              <span>Inclusivity</span>
+            </li>
+            <li class="flex items-center animate__animated animate__fadeInRight animate__delay-4s">
+              <span class="bg-yellow-100 text-yellow-800 rounded-full p-2 mr-3">⚖️</span>
+              <span>Equity</span>
+            </li>
+            <li class="flex items-center animate__animated animate__fadeInRight animate__delay-5s">
+              <span class="bg-red-100 text-red-800 rounded-full p-2 mr-3">🕊️</span>
+              <span>Justice</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership / Board Members -->
+  <section class="bg-gradient-to-br from-blue-50 to-gray-100 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-4 animate__animated animate__fadeInUp">
+        Our Leadership & Board Members
+      </h2>
+      <div class="section-divider mb-12"></div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Ken Ondoro -->
+        <div class="card-hover bg-white rounded-2xl p-6 text-center relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-orange-500"></div>
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <img src="images/ondoro.png" alt="Ken Ondoro" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-bold text-xl text-blue-900">Ken Ondoro</h3>
+          <p class="text-orange-600 font-medium mb-3">Chairperson</p>
+          <p class="text-gray-600 text-sm leading-relaxed text-justify">
+            An accomplished Researcher, Trainer, Speaker, and Author. Founder & MD of African Research and Development (ARD) with fieldwork across Africa and Asia. Led interventions with Global Fund, UNICEF, Child Fund, World Vision, CRVPF, and others in over 17 countries.
+          </p>
+        </div>
+
+        <!-- Job Kinyua Muriithi -->
+        <div class="card-hover bg-white rounded-2xl p-6 text-center relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-green-500"></div>
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <img src="images/job.png" alt="Job Kinyua" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-bold text-xl text-blue-900">Job Kinyua Muriithi</h3>
+          <p class="text-orange-600 font-medium mb-3">Board Member</p>
+          <p class="text-gray-600 text-sm leading-relaxed text-justify">
+            Results-driven Program Manager with 10+ years in Monitoring, Evaluation, Accountability, Research, and Learning (MEARL). Expertise in grant management, report writing, data analysis, and project performance improvement for vulnerable populations.
+          </p>
+        </div>
+
+        <!-- Sophie Otticha -->
+        <div class="card-hover bg-white rounded-2xl p-6 text-center relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-purple-500"></div>
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <img src="images/sophie.png" alt="Sophie Otticha" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-bold text-xl text-blue-900">Sophie Otticha</h3>
+          <p class="text-orange-600 font-medium mb-3">Board Member</p>
+          <p class="text-gray-600 text-sm leading-relaxed text-justify">
+            Public Health Professional with 10+ years' experience in qualitative and quantitative health research. Skilled in Photovoice, HCD workshops, ethnography, FGDs, in-depth and cognitive interviews.
+          </p>
+        </div>
+
+        <!-- Sanga Jonesmus Kipkirui -->
+        <div class="card-hover bg-white rounded-2xl p-6 text-center relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <img src="images/sanga.png" alt="Sanga JK" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-bold text-xl text-blue-900">Sanga Jonesmus Kipkirui</h3>
+          <p class="text-orange-600 font-medium mb-3">Board Member</p>
+          <p class="text-gray-600 text-sm leading-relaxed text-justify">
+            Holds B.A & MDev (UoN). Political Economist & Public Policy Consultant. Expertise in PFM, enterprise development, gender & affirmative action. Former Programme Associate at Deepening Democracy Programme.
+          </p>
+        </div>
+
+        <!-- Kenedy Anjejo -->
+        <div class="card-hover bg-white rounded-2xl p-6 text-center relative overflow-hidden md:col-span-2 lg:col-span-1">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 to-red-500"></div>
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <img src="images/ken.png" alt="Kenedy Anjejo" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-bold text-xl text-blue-900">Kenedy Anjejo</h3>
+          <p class="text-orange-600 font-medium mb-3">Secretary & Executive Director</p>
+          <p class="text-gray-600 text-sm leading-relaxed text-justify">
+            Founder | Director of CLS CBO with 12+ years' consultancy experience in healthcare, child protection, governance, social accountability, gender, and sustainable development. Member of AMREF UHC platform, IDS-Kenya Transport Research Network, and Kisumu County Accountability Alliance. A mentor, social change advocate, and budget champion.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-4">Our Valued Partners</h2>
+      <div class="section-divider mb-12 bg-white"></div>
+      <p class="text-center text-blue-100 mb-12 max-w-3xl mx-auto">
+        We collaborate with a diverse network of organizations to amplify our impact and create sustainable change in Western Kenya.
+      </p>
+      
+      <div class="overflow-hidden py-6">
+        <div class="partner-slide flex space-x-12">
+          <!-- Partner logos would go here -->
+          <div class="partner-logo flex-shrink-0">
+            <div class="bg-white rounded-lg p-4 h-16 w-40 flex items-center justify-center">
+              <span class="text-blue-900 font-bold">Partner 1</span>
+            </div>
+          </div>
+          <div class="partner-logo flex-shrink-0">
+            <div class="bg-white rounded-lg p-4 h-16 w-40 flex items-center justify-center">
+              <span class="text-blue-900 font-bold">Partner 2</span>
+            </div>
+          </div>
+          <div class="partner-logo flex-shrink-0">
+            <div class="bg-white rounded-lg p-4 h-16 w-40 flex items-center justify-center">
+              <span class="text-blue-900 font-bold">Partner 3</span>
+            </div>
+          </div>
+          <div class="partner-logo flex-shrink-0">
+            <div class="bg-white rounded-lg p-4 h-16 w-40 flex items-center justify-center">
+              <span class="text-blue-900 font-bold">Partner 4</span>
+            </div>
+          </div>
+          <div class="partner-logo flex-shrink-0">
+            <div class="bg-white rounded-lg p-4 h-16 w-40 flex items-center justify-center">
+              <span class="text-blue-900 font-bold">Partner 5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="join.html" class="btn-primary inline-block text-white font-bold py-3 px-8 rounded-full">
+          Become a Partner <i class="fas fa-handshake ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-8">
+        <!-- Logo and description -->
+        <div class="md:w-1/3">
+          <div class="flex items-center space-x-3 mb-4">
+            <img src="images/cls-logo.jpeg" alt="CLS Logo" class="h-12 w-12 rounded-md">
+            <span class="font-bold text-xl">COMMUNITY LED SOLUTIONS CBO</span>
+          </div>
+          <p class="text-blue-200 mb-4">
+            Empowering communities in Kisumu and Western Kenya through sustainable, community-led solutions.
+          </p>
+          <div class="flex space-x-4">
+            <a href="tel:+254 707 455648" class="text-blue-200 hover:text-white transition-colors duration-300">
+              <i class="fas fa-phone-alt mr-2"></i> +254 712 345 678
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="md:w-1/3">
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-blue-200 hover:text-white transition-colors duration-300">Home</a></li>
+            <li><a href="about.html" class="text-orange-400 font-semibold">About Us</a></li>
+            <li><a href="programs.html" class="text-blue-200 hover:text-white transition-colors duration-300">Our Programs</a></li>
+            <li><a href="resources.html" class="text-blue-200 hover:text-white transition-colors duration-300">Resources</a></li>
+            <li><a href="contact.html" class="text-blue-200 hover:text-white transition-colors duration-300">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Social Links and Contact -->
+        <div class="md:w-1/3">
+          <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+          <div class="flex space-x-4 mb-6">
+            <a href="https://facebook.com/CommunityLedSolutionsCBO" target="_blank" rel="noopener" 
+               class="bg-blue-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/clscbo" target="_blank" rel="noopener" 
+               class="bg-blue-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/company/community-led-solutions-cbo" target="_blank" rel="noopener" 
+               class="bg-blue-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-300">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com/communityledsolutions" target="_blank" rel="noopener" 
+               class="bg-blue-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:cls.cbo101@gmail.com" 
+               class="bg-blue-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-300">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+          <p class="text-blue-200">
+            <i class="fas fa-map-marker-alt mr-2"></i> Obwolo-Osiepe Road, West Kajulu, Kisumu County
+          </p>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-blue-800 mt-8 pt-6 text-center text-blue-300">
+        <p>&copy; <span id="year"></span> Community-Led Solutions CBO. All rights reserved.</p>
+        <p class="mt-2">Website by <a href="https://www.skopedesigns.co.ke" target="_blank" rel="noopener" class="text-orange-400 hover:underline">Skope Designs</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    feather.replace();
+
+    // Hamburger toggle
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    let open = false;
+
+    hamburger.addEventListener("click", () => {
+      open = !open;
+      mobileMenu.classList.toggle("hidden");
+      hamburger.innerHTML = open
+        ? '<i data-feather="x" class="h-7 w-7"></i>'
+        : '<i data-feather="menu" class="h-7 w-7"></i>';
+      feather.replace();
+    });
+
+    // Animated Hero Slider
+    const hero = document.getElementById("hero");
+    const slides = [
+      "images/cls image (7).jpeg",
+      "images/cls image (35).jpeg",
+      "images/cls image (18).jpeg"
+    ];
+    let index = 0;
+
+    function changeSlide() {
+      index = (index + 1) % slides.length;
+      hero.classList.remove('slide-animate');
+      void hero.offsetWidth; // trigger reflow for animation
+      hero.style.backgroundImage = `url('${slides[index]}')`;
+      hero.classList.add('slide-animate');
+    }
+    hero.style.backgroundImage = `url('${slides[0]}')`;
+    hero.classList.add('slide-animate');
+    setInterval(changeSlide, 5000);
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Partners slider for mobile: duplicate images for seamless loop
+    if(window.innerWidth <= 768) {
+      const partnerSlide = document.querySelector('.partner-slide');
+      if (partnerSlide) {
+        partnerSlide.innerHTML += partnerSlide.innerHTML;
+      }
+    }
+
+    // Scroll progress indicator
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.querySelector('.scroll-progress').style.width = scrolled + '%';
+    });
+
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('active');
+      } else {
+        backToTopButton.classList.remove('active');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.animate__animated').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

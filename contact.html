@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Community-Led Solutions CBO</title>
+  <meta name="description" content="Get in touch with Community-Led Solutions CBO in Kisumu, Kenya. Use our contact form, call, email, or visit our office for partnerships, inquiries, or support." />
+  <meta name="keywords" content="contact CLS CBO, Kisumu NGO, community organization Kenya, partnership, volunteer, governance, health, child protection, climate action" />
+  <meta name="author" content="Community-Led Solutions CBO | Website by Skope Designs" />
+  <link rel="canonical" href="https://www.clscbo.org/contact.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Us | Community-Led Solutions CBO" />
+  <meta property="og:description" content="Reach out for partnerships, inquiries, or to get involved with our work in Kisumu." />
+  <meta property="og:image" content="https://www.clscbo.org/images/cls-social-share.jpg" />
+  <meta property="og:url" content="https://www.clscbo.org/contact.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins', 'sans-serif'] },
+          colors: { primary: '#1e40af', accent: '#f97316' },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    .hero {
+      background: linear-gradient(rgba(30, 64, 175, 0.88), rgba(0, 0, 0, 0.7)), url('images/cls-banner-2.jpeg') center/cover no-repeat;
+      min-height: 70vh;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    .form-input {
+      transition: all 0.35s ease;
+      border: 2px solid #e5e7eb;
+    }
+    .form-input:focus {
+      border-color: #f97316;
+      box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.2);
+      transform: translateY(-3px) scale(1.01);
+      outline: none;
+    }
+    .form-input.error {
+      border-color: #ef4444;
+      box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
+    }
+    .contact-card {
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border-radius: 1rem;
+    }
+    .contact-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.2);
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: linear-gradient(135deg, #1e40af, #f97316);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease;
+      z-index: 1000;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      transform: scale(1.2) rotate(360deg);
+    }
+    .social-icon {
+      transition: all 0.4s ease;
+    }
+    .social-icon:hover {
+      transform: translateY(-5px) scale(1.2);
+      background: #f97316 !important;
+    }
+    .feedback-message {
+      padding: 1rem 1.25rem;
+      border-radius: 0.75rem;
+      margin-bottom: 1.5rem;
+      display: none;
+      border: 1px solid transparent;
+      font-weight: 500;
+    }
+    .success-message { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+    .error-message { background: #fef2f2; color: #991b1b; border-color: #fecaca; }
+    .map-container {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+    }
+    .map-container:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gradient-to-b from-gray-50 to-white">
+
+  <!-- Back to Top -->
+  <button class="back-to-top animate__animated animate__bounceIn" aria-label="Back to top">
+    <i class="fas fa-chevron-up text-2xl"></i>
+  </button>
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white sticky top-0 z-50 shadow-xl">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <img src="images/cls-logo.jpeg" alt="CLS Logo" class="h-12 w-12 rounded-lg shadow-lg group-hover:scale-110 transition duration-300">
+        <span class="font-bold text-xl tracking-tight">COMMUNITY LED SOLUTIONS CBO</span>
+      </a>
+      <nav class="hidden md:flex space-x-7 text-lg">
+        <a href="index.html" class="hover:text-orange-400 hover:scale-110 transition transform">Home</a>
+        <a href="about.html" class="hover:text-orange-400 hover:scale-110 transition transform">About</a>
+        <a href="programs.html" class="hover:text-orange-400 hover:scale-110 transition transform">Programs</a>
+        <a href="resources.html" class="hover:text-orange-400 hover:scale-110 transition transform">Resources</a>
+        <a href="blog.html" class="hover:text-orange-400 hover:scale-110 transition transform">Blog</a>
+        <a href="contact.html" class="text-orange-400 font-bold hover:scale-110 transition transform">Contact</a>
+        <a href="donate.html" class="bg-orange-500 px-5 py-2 rounded-full hover:bg-orange-600 transition font-bold shadow-md">Donate</a>
+      </nav>
+      <button id="hamburger" class="md:hidden focus:outline-none transition transform hover:scale-110" aria-label="Menu">
+        <i data-feather="menu" class="h-8 w-8"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden flex-col bg-blue-800 md:hidden px-6 pb-5 space-y-3 animate__animated animate__fadeInDown">
+      <a href="index.html" class="block py-3 border-b border-blue-700 hover:text-orange-400 text-lg">Home</a>
+      <a href="about.html" class="block py-3 border-b border-blue-700 hover:text-orange-400 text-lg">About</a>
+      <a href="programs.html" class="block py-3 border-b border-blue-700 hover:text-orange-400 text-lg">Programs</a>
+      <a href="resources.html" class="block py-3 border-b border-blue-700 hover:text-orange-400 text-lg">Resources</a>
+      <a href="blog.html" class="block py-3 border-b border-blue-700 hover:text-orange-400 text-lg">Blog</a>
+      <a href="contact.html" class="block py-3 border-b border-blue-700 text-orange-400 font-bold text-lg">Contact</a>
+      <a href="donate.html" class="block py-3 bg-orange-500 rounded-full text-center hover:bg-orange-600 font-bold">Donate</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero flex items-center justify-center text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+    <div class="text-center px-6 max-w-5xl mx-auto z-10 animate__animated animate__fadeInDown">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+        Let’s Connect & <span class="text-orange-400">Build Together</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed">
+        Whether you’re a partner, donor, volunteer, or community member — we’d love to hear from you.
+      </p>
+      <a href="#contact-form" class="inline-block bg-orange-500 px-10 py-5 rounded-full text-xl font-bold hover:bg-orange-600 transition transform hover:scale-110 shadow-xl animate__animated animate__pulse animate__infinite animate__slower">
+        Start a Conversation
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-24 bg-gradient-to-b from-white to-gray-50" id="contact-form">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
+
+      <!-- Contact Form -->
+      <div class="contact-card bg-white p-10 rounded-2xl shadow-xl animate__animated animate__fadeInLeft">
+        <h2 class="text-4xl font-bold text-blue-900 mb-8 flex items-center">
+          <i class="fas fa-paper-plane text-orange-500 mr-3"></i> Send a Message
+        </h2>
+
+        <!-- Feedback -->
+        <div id="successMessage" class="feedback-message success-message animate__animated animate__fadeIn">
+          <i class="fas fa-check-circle mr-2"></i> Thank you! Your message has been sent. We’ll reply within 24 hours.
+        </div>
+        <div id="errorMessage" class="feedback-message error-message animate__animated animate__fadeIn">
+          <i class="fas fa-exclamation-triangle mr-2"></i> Please fix the errors and try again.
+        </div>
+
+        <form id="contactForm" class="space-y-7">
+          <div>
+            <label class="block text-gray-700 font-semibold mb-2">Full Name <span class="text-red-500">*</span></label>
+            <input type="text" name="name" required class="w-full px-5 py-4 border-2 rounded-xl form-input" placeholder="e.g., Jane Doe">
+            <p class="text-red-500 text-sm mt-1 hidden error-text">Please enter your name</p>
+          </div>
+          <div>
+            <label class="block text-gray-700 font-semibold mb-2">Email Address <span class="text-red-500">*</span></label>
+            <input type="email" name="email" required class="w-full px-5 py-4 border-2 rounded-xl form-input" placeholder="jane@example.com">
+            <p class="text-red-500 text-sm mt-1 hidden error-text">Please enter a valid email</p>
+          </div>
+          <div>
+            <label class="block text-gray-700 font-semibold mb-2">Subject <span class="text-red-500">*</span></label>
+            <input type="text" name="subject" required class="w-full px-5 py-4 border-2 rounded-xl form-input" placeholder="e.g., Partnership Inquiry">
+            <p class="text-red-500 text-sm mt-1 hidden error-text">Subject is required</p>
+          </div>
+          <div>
+            <label class="block text-gray-700 font-semibold mb-2">Your Message <span class="text-red-500">*</span></label>
+            <textarea name="message" rows="6" required class="w-full px-5 py-4 border-2 rounded-xl form-input resize-none" placeholder="Tell us how we can help..."></textarea>
+            <p class="text-red-500 text-sm mt-1 hidden error-text">Message cannot be empty</p>
+          </div>
+          <button type="submit" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold py-5 rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 text-xl shadow-lg flex items-center justify-center">
+            <span id="submitText">Send Message</span>
+            <i id="submitIcon" class="fas fa-paper-plane ml-3"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info + Map -->
+      <div class="space-y-10 animate__animated animate__fadeInRight">
+        <!-- Info Card -->
+        <div class="contact-card bg-white p-10 rounded-2xl shadow-xl">
+          <h2 class="text-4xl font-bold text-blue-900 mb-8 flex items-center">
+            <i class="fas fa-headset text-orange-500 mr-3"></i> Get in Touch
+          </h2>
+          <div class="space-y-8 text-gray-700 text-lg">
+            <div class="flex items-start group">
+              <div class="bg-orange-100 p-4 rounded-full mr-5 group-hover:bg-orange-500 transition">
+                <i class="fas fa-map-marker-alt text-orange-600 group-hover:text-white text-2xl"></i>
+              </div>
+              <div>
+                <strong class="block font-bold text-xl mb-1">Office Address</strong>
+                <p class="leading-relaxed">
+                  Obwolo-Osiepe Road, West Kajulu<br>
+                  <strong>Kisumu County, Kenya</strong>
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center group">
+              <div class="bg-orange-100 p-4 rounded-full mr-5 group-hover:bg-orange-500 transition">
+                <i class="fas fa-phone-alt text-orange-600 group-hover:text-white text-2xl"></i>
+              </div>
+              <div>
+                <strong class="block font-bold text-xl mb-1">Call Us</strong>
+                <a href="tel:+254707455648" class="text-orange-600 hover:text-orange-700 font-bold text-xl">+254 707 455 648</a>
+              </div>
+            </div>
+            <div class="flex items-center group">
+              <div class="bg-orange-100 p-4 rounded-full mr-5 group-hover:bg-orange-500 transition">
+                <i class="fas fa-envelope text-orange-600 group-hover:text-white text-2xl"></i>
+              </div>
+              <div>
+                <strong class="block font-bold text-xl mb-1">Email Us</strong>
+                <a href="mailto:cls.cbo101@gmail.com" class="text-orange-600 hover:text-orange-700 font-bold text-xl">cls.cbo101@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.873719013865!2d34.801604315263!3d-0.0894229999553641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa47b6495b62b%3A0x8052f9c15a550606!2sKisumu!5e0!3m2!1sen!2ske!4v1672823805432!5m2!1sen!2ske"
+            width="100%"
+            height="380"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="CLS CBO Office Location in Kisumu"
+            class="w-full h-full">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-12">
+        <div>
+          <div class="flex items-center space-x-4 mb-6">
+            <img src="images/cls-logo.jpeg" alt="CLS Logo" class="h-14 w-14 rounded-lg shadow-lg">
+            <span class="font-bold text-2xl">COMMUNITY LED SOLUTIONS CBO</span>
+          </div>
+          <p class="text-blue-200 leading-relaxed mb-6">
+            Empowering communities in Kisumu and Western Kenya through sustainable, community-led solutions in governance, health, child protection, and climate action.
+          </p>
+          <a href="tel:+254707455648" class="inline-flex items-center text-orange-400 hover:text-white transition">
+            <i class="fas fa-phone-alt mr-2"></i> +254 707 455 648
+          </a>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+          <ul class="space-y-3 text-lg">
+            <li><a href="index.html" class="text-blue-200 hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="text-orange-400 font-bold">About Us</a></li>
+            <li><a href="programs.html" class="text-blue-200 hover:text-white transition">Programs</a></li>
+            <li><a href="resources.html" class="text-blue-200 hover:text-white transition">Resources</a></li>
+            <li><a href="blog.html" class="text-blue-200 hover:text-white transition">Blog</a></li>
+            <li><a href="contact.html" class="text-orange-400 font-bold">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-6">Connect With Us</h3>
+          <div class="flex space-x-4 mb-8">
+            <a href="https://facebook.com/CommunityLedSolutionsCBO" target="_blank" rel="noopener" class="social-icon bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/clscbo" target="_blank" rel="noopener" class="social-icon bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/company/community-led-solutions-cbo" target="_blank" rel="noopener" class="social-icon bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com/communityledsolutions" target="_blank" rel="noopener" class="social-icon bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:cls.cbo101@gmail.com" class="social-icon bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+          <p class="text-blue-200 leading-relaxed">
+            <i class="fas fa-map-marker-alt mr-2"></i> 
+            Obwolo-Osiepe Road, West Kajulu<br>
+            Kisumu County, Kenya
+          </p>
+        </div>
+      </div>
+      
+      <div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-300">
+        <p class="text-lg">© <span id="year"></span> Community-Led Solutions CBO. All rights reserved.</p>
+        <p class="mt-3">Website by <a href="https://www.skopedesigns.co.ke" target="_blank" rel="noopener" class="text-orange-400 hover:underline font-bold">Skope Designs</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    feather.replace();
+
+    // Mobile Menu
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    let open = false;
+    hamburger.addEventListener("click", () => {
+      open = !open;
+      mobileMenu.classList.toggle("hidden");
+      hamburger.innerHTML = open ? '<i data-feather="x" class="h-8 w-8"></i>' : '<i data-feather="menu" class="h-8 w-8"></i>';
+      feather.replace();
+    });
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Back to Top
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('active', window.scrollY > 600);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Form Validation & Submission
+    const form = document.getElementById('contactForm');
+    const inputs = form.querySelectorAll('input, textarea');
+    const successMsg = document.getElementById('successMessage');
+    const errorMsg = document.getElementById('errorMessage');
+    const submitBtn = form.querySelector('button');
+    const submitText = document.getElementById('submitText');
+    const submitIcon = document.getElementById('submitIcon');
+
+    // Real-time validation
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        validateField(input);
+      });
+    });
+
+    function validateField(field) {
+      const errorText = field.parentElement.querySelector('.error-text');
+      if (!field.validity.valid) {
+        field.classList.add('error');
+        errorText.classList.remove('hidden');
+      } else {
+        field.classList.remove('error');
+        errorText.classList.add('hidden');
+      }
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      let valid = true;
+      inputs.forEach(input => {
+        validateField(input);
+        if (!input.validity.valid) valid = false;
+      });
+
+      if (!valid) {
+        errorMsg.style.display = 'block';
+        successMsg.style.display = 'none';
+        return;
+      }
+
+      // Loading
+      submitBtn.disabled = true;
+      submitText.textContent = 'Sending';
+      submitIcon.className = 'fas fa-spinner fa-spin ml-3';
+
+      // Simulate send
+      setTimeout(() => {
+        successMsg.style.display = 'block';
+        errorMsg.style.display = 'none';
+        form.reset();
+        submitBtn.disabled = false;
+        submitText.textContent = 'Send Message';
+        submitIcon.className = 'fas fa-paper-plane ml-3';
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

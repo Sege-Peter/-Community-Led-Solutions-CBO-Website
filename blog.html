@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Community-Led Solutions CBO</title>
+  <meta name="description" content="Latest news, insights, and stories from CLS CBO. Discover our work in governance, health, child protection, and climate action in Kisumu, Kenya.">
+  <meta name="keywords" content="CLS CBO blog, community development Kenya, Kisumu stories, governance insights, climate action blog, child protection articles, health initiatives Kenya">
+  <meta name="author" content="Community-Led Solutions CBO | Website by Skope Designs">
+  <link rel="canonical" href="https://www.clscbo.org/blog.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blog | Community-Led Solutions CBO" />
+  <meta property="og:description" content="Insights, stories, and updates from our work on the ground in Kisumu." />
+  <meta property="og:image" content="https://www.clscbo.org/images/cls-banner.jpeg" />
+  <meta property="og:url" content="https://www.clscbo.org/blog.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins', 'sans-serif'] },
+          colors: { primary: '#1e40af', accent: '#f97316' },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-glow': 'pulse-glow 2s infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            'pulse-glow': {
+              '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+              '70%': { transform: 'scale(1.06)', opacity: '0.88' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    .hero {
+      background: linear-gradient(rgba(30,64,175,0.88), rgba(0,0,0,0.65)), url('images/cls-banner.jpeg') center/cover no-repeat;
+      min-height: 65vh;
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+    }
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: linear-gradient(90deg, #1e40af, #f97316);
+      z-index: 1000;
+      transition: width 0.3s ease;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: CRYPT 2rem;
+      right: 2rem;
+      background: linear-gradient(135deg, #1e40af, #f97316);
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      z-index: 1000;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      transform: scale(1.15);
+    }
+    .blog-card {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      position: relative;
+    }
+    .blog-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .blog-img {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .blog-card:hover .blog-img {
+      transform: scale(1.08);
+    }
+    .tag {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #f97316;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(249,115,22,0.3);
+    }
+    .search-input {
+      transition: all 0.3s ease;
+      border: 2px solid #e5e7eb;
+    }
+    .search-input:focus {
+      border-color: #f97316;
+      box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.2);
+      outline: none;
+    }
+    .filter-btn {
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    .filter-btn.active {
+      background: #f97316;
+      color: white;
+      border-color: #f97316;
+    }
+    .filter-btn:hover:not(.active) {
+      border-color: #f97316;
+      color: #f97316;
+    }
+    .pagination-btn {
+      transition: all 0.3s ease;
+    }
+    .pagination-btn.active {
+      background: #f97316;
+      color: white;
+      border-color: #f97316;
+    }
+    .pagination-btn:hover:not(.disabled) {
+      background: #ea580c;
+      color: white;
+      border-color: #ea580c;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gradient-to-b from-gray-50 to-white">
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress"></div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top animate__animated animate__bounceIn" aria-label="Back to top">
+    <i class="fas fa-chevron-up text-xl"></i>
+  </button>
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <img src="images/cls-logo.jpeg" alt="CLS Logo" class="h-12 w-12 rounded-lg shadow group-hover:scale-110 transition">
+        <span class="font-bold text-xl">COMMUNITY LED SOLUTIONS CBO</span>
+      </a>
+      <nav class="hidden md:flex space-x-7 text-lg">
+        <a href="index.html" class="hover:text-orange-400 hover:scale-110 transition">Home</a>
+        <a href="about.html" class="hover:text-orange-400 hover:scale-110 transition">About</a>
+        <a href="programs.html" class="hover:text-orange-400 hover:scale-110 transition">Programs</a>
+        <a href="resources.html" class="hover:text-orange-400 hover:scale-110 transition">Resources</a>
+        <a href="blog.html" class="text-orange-400 font-bold hover:scale-110 transition">Blog</a>
+        <a href="contact.html" class="hover:text-orange-400 hover:scale-110 transition">Contact</a>
+        <a href="donate.html" class="bg-orange-500 px-5 py-2 rounded-full hover:bg-orange-600 transition font-bold shadow-md">Donate</a>
+      </nav>
+      <button id="hamburger" class="md:hidden focus:outline-none transition hover:scale-110" aria-label="Menu">
+        <i data-feather="menu" class="h-8 w-8"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden flex-col bg-blue-800 md:hidden px-6 pb-5 space-y-3 animate__animated animate__fadeInDown">
+      <a href="index.html" class="block py-3 border-b border-blue-700 hover:text-orange-400">Home</a>
+      <a href="about.html" class="block py-3 border-b border-blue-700 hover:text-orange-400">About</a>
+      <a href="programs.html" class="block py-3 border-b border-blue-700 hover:text-orange-400">Programs</a>
+      <a href="resources.html" class="block py-3 border-b border-blue-700 hover:text-orange-400">Resources</a>
+      <a href="blog.html" class="block py-3 border-b border-blue-700 text-orange-400 font-bold">Blog</a>
+      <a href="contact.html" class="block py-3 border-b border-blue-700 hover:text-orange-400">Contact</a>
+      <a href="donate.html" class="block py-3 bg-orange-500 rounded-full text-center hover:bg-orange-600 font-bold">Donate</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero flex items-center justify-center text-white relative overflow-hidden">
+    <div class="text-center px-6 max-w-5xl mx-auto z-10">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate__animated animate__fadeInDown">
+        CLS CBO <span class="text-orange-400">Blog</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">
+        Stories, insights, and impact from the heart of Kisumu.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Search & Filters -->
+      <div class="mb-12 flex flex-col md:flex-row gap-6 items-center justify-between">
+        <div class="w-full md:w-96">
+          <div class="relative">
+            <input type="text" id="searchInput" placeholder="Search posts..." class="w-full px-5 py-3 pl-12 rounded-xl search-input text-gray-700">
+            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <button class="filter-btn px-5 py-2 rounded-full border-2 font-medium active" data-filter="all">All</button>
+          <button class="filter-btn px-5 py-2 rounded-full border-2 font-medium" data-filter="governance">Governance</button>
+          <button class="filter-btn px-5 py-2 rounded-full border-2 font-medium" data-filter="climate">Climate</button>
+          <button class="filter-btn px-5 py-2 rounded-full border-2 font-medium" data-filter="child">Child Protection</button>
+          <button class="filter-btn px-5 py-2 rounded-full border-2 font-medium" data-filter="health">Health</button>
+        </div>
+      </div>
+
+      <!-- Blog Grid -->
+      <div id="blogGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Post 1 -->
+        <article class="blog-card animate__animated animate__fadeInUp" data-category="governance">
+          <img src="images/cls image (7).jpeg" alt="Community meeting in Kisumu" class="w-full blog-img">
+          <div class="tag">Governance</div>
+          <div class="p-6">
+            <time class="text-sm text-gray-500 block mb-2">October 26, 2025</time>
+            <h2 class="text-2xl font-bold text-blue-900 mb-3">The Power of Community-Led Development</h2>
+            <p class="text-gray-700 mb-4 line-clamp-3">
+              Community-led development empowers locals to identify needs and drive progress. This fosters ownership and ensures solutions fit the real context.
+            </p>
+            <a href="blog/post1.html" class="text-orange-500 font-semibold hover:underline inline-flex items-center">
+              Read More <i class="ml-2" data-feather="arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-card animate__animated animate__fadeInUp" data-category="climate" style="animation-delay: 0.1s;">
+          <img src="images/cls image (35).jpeg" alt="Climate action with water hyacinth" class="w-full blog-img">
+          <div class="tag">Climate Action</div>
+          <div class="p-6">
+            <time class="text-sm text-gray-500 block mb-2">October 20, 2025</time>
+            <h2 class="text-2xl font-bold text-blue-900 mb-3">Turning Water Hyacinth into Biogas</h2>
+            <p class="text-gray-700 mb-4 line-clamp-3">
+              Residents are turning invasive water hyacinth into biogas — a powerful local solution for clean energy and environmental restoration.
+            </p>
+            <a href="blog/post2.html" class="text-orange-500 font-semibold hover:underline inline-flex items-center">
+              Read More <i class="ml-2" data-feather="arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-card animate__animated animate__fadeInUp" data-category="child" style="animation-delay: 0.2s;">
+          <img src="images/cls image (18).jpeg" alt="Child protection workshop" class="w-full blog-img">
+          <div class="tag">Child Protection</div>
+          <div class="p-6">
+            <time class="text-sm text-gray-500 block mb-2">October 15, 2025</time>
+            <h2 class="text-2xl font-bold text-blue-900 mb-3">Safeguarding Children in Kisumu</h2>
+            <p class="text-gray-700 mb-4 line-clamp-3">
+              We partner with communities and authorities to create safe spaces where children’s voices are heard and their rights protected.
+            </p>
+            <a href="blog/post3.html" class="text-orange-500 font-semibold hover:underline inline-flex items-center">
+              Read More <i class="ml-2" data-feather="arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Add more posts here -->
+      </div>
+
+      <!-- Pagination -->
+      <div class="mt-12 flex justify-center items-center space-x-3">
+        <button class="pagination-btn w-10 h-10 rounded-full border-2 disabled:opacity-50 disabled:cursor-not-allowed" id="prevPage" disabled>
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="pagination-btn w-10 h-10 rounded-full border-2 active">1</button>
+        <button class="pagination-btn w-10 h-10 rounded-full border-2">2</button>
+        <button class="pagination-btn w-10 h-10 rounded-full border-2">3</button>
+        <button class="pagination-btn w-10 h-10 rounded-full border-2" id="nextPage">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-12">
+        <div>
+          <div class="flex items-center space-x-4 mb-6">
+            <img src="images/cls-logo.jpeg" alt="CLS Logo" class="h-14 w-14 rounded-lg">
+            <span class="font-bold text-2xl">COMMUNITY LED SOLUTIONS CBO</span>
+          </div>
+          <p class="text-blue-200 leading-relaxed mb-6">
+            Empowering communities in Kisumu and Western Kenya through sustainable, community-led solutions.
+          </p>
+          <a href="tel:+254707455648" class="text-orange-400 hover:text-white">
+            <i class="fas fa-phone-alt mr-2"></i> +254 707 455 648
+          </a>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+          <ul class="space-y-3 text-lg">
+            <li><a href="index.html" class="text-blue-200 hover:text-white">Home</a></li>
+            <li><a href="about.html" class="text-orange-400 font-bold">About Us</a></li>
+            <li><a href="programs.html" class="text-blue-200 hover:text-white">Programs</a></li>
+            <li><a href="resources.html" class="text-blue-200 hover:text-white">Resources</a></li>
+            <li><a href="blog.html" class="text-orange-400 font-bold">Blog</a></li>
+            <li><a href="contact.html" class="text-blue-200 hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Connect With Us</h3>
+          <div class="flex space-x-4 mb-8">
+            <a href="https://facebook.com/CommunityLedSolutionsCBO" target="_blank" rel="noopener" class="bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/clscbo" target="_blank" rel="noopener" class="bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/company/community-led-solutions-cbo" target="_blank" rel="noopener" class="bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com/communityledsolutions" target="_blank" rel="noopener" class="bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:cls.cbo101@gmail.com" class="bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+          <p class="text-blue-200">
+            <i class="fas fa-map-marker-alt mr-2"></i> Obwolo-Osiepe Road, West Kajulu, Kisumu County
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-300">
+        <p class="text-lg">© <span id="year"></span> Community-Led Solutions CBO. All rights reserved.</p>
+        <p class="mt-3">Website by <a href="https://www.skopedesigns.co.ke" target="_blank" rel="noopener" class="text-orange-400 hover:underline font-bold">Skope Designs</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    feather.replace();
+
+    // Mobile Menu
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    let open = false;
+    hamburger.addEventListener("click", () => {
+      open = !open;
+      mobileMenu.classList.toggle("hidden");
+      hamburger.innerHTML = open ? '<i data-feather="x" class="h-8 w-8"></i>' : '<i data-feather="menu" class="h-8 w-8"></i>';
+      feather.replace();
+    });
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll Progress
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.querySelector('.scroll-progress').style.width = scrolled + '%';
+    });
+
+    // Back to Top
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('active', window.scrollY > 600);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Search & Filter
+    const searchInput = document.getElementById('searchInput');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const blogGrid = document.getElementById('blogGrid');
+    const posts = blogGrid.querySelectorAll('.blog-card');
+
+    function filterPosts() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+
+      posts.forEach(post => {
+        const title = post.querySelector('h2').textContent.toLowerCase();
+        const content = post.querySelector('p').textContent.toLowerCase();
+        const category = post.dataset.category;
+
+        const matchesSearch = title.includes(searchTerm) || content.includes(searchTerm);
+        const matchesFilter = activeFilter === 'all' || category === activeFilter;
+
+        post.style.display = matchesSearch && matchesFilter ? 'block' : 'none';
+      });
+    }
+
+    searchInput.addEventListener('input', filterPosts);
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filterPosts();
+      });
+    });
+
+    // Pagination (demo)
+    const prevPage = document.getElementById('prevPage');
+    const nextPage = document.getElementById('nextPage');
+    let currentPage = 1;
+    const totalPages = 3;
+
+    nextPage.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        updatePagination();
+      }
+    });
+    prevPage.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        updatePagination();
+      }
+    });
+
+    function updatePagination() {
+      document.querySelectorAll('.pagination-btn').forEach((btn, i) => {
+        if (btn.tagName === 'BUTTON' && !btn.id) {
+          btn.classList.toggle('active', i + 1 === currentPage);
+        }
+      });
+      prevPage.disabled = currentPage === 1;
+      nextPage.disabled = currentPage === totalPages;
+    }
+    updatePagination();
+  </script>
+</body>
+</html>
